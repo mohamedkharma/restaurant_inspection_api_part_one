@@ -1,7 +1,3 @@
-**Due date: Tuesday, November 22 @ 11:59PM EST.**
-
-**Submit via BlackBoard**
-
 # Restaurant Inspection API Part I
 
 The New York City Department of Health and Mental Hygiene (DOHMH) has publicized Restaurant Inspection Results. You can find the restaurant inspection results [here](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j).
@@ -37,11 +33,11 @@ Below you will find several examples of requests that clients might make:
     - [Example response](golden_files/search_by_restaurant_name.json)
   - `curl --location --request GET 'http://127.0.0.1:5000/search?zipcode=10031'`
     - [Example response](golden_files/search_by_zipcode.json)
-  - `curl --location --request GET 'http://127.0.0.1:5000/search?cusine=italian&limit=5'`
+  - `curl --location --request GET 'http://127.0.0.1:5000/search?cuisine=italian&limit=5'`
     - [Example response](golden_files/search_by_cusine_with_limit.json)
-  - `curl --location --request GET 'http://127.0.0.1:5000/search?cusine=mexican&zipcode=10003`
+  - `curl --location --request GET 'http://127.0.0.1:5000/search?cuisine=mexican&zipcode=10003`
     - [Example response](golden_files/search_by_cusine_and_zipcode.json)
-  - `curl --location --request GET 'http://127.0.0.1:5000/search?restaurant_name=taco&cusine=mexican&zipcode=10003'`
+  - `curl --location --request GET 'http://127.0.0.1:5000/search?restaurant_name=taco&cuisine=mexican&zipcode=10003'`
     - [Example response](golden_files/search_by_restaurant_name_cusine_and_zipcode.json)
 
 Engineers are expecting the API response to be the following shape:
@@ -79,9 +75,4 @@ Things to keep in mind:
   - The default results limit is ten (10) unless specified by the client. Unless the client provides a limit via a query parameter (`?limit=25`), you are to return up to 10 results.
   - Clients can choose to provide one filter or many. Your solution should be able to accommodate any combination.
 
-The assignment's grading is as follows:
-  - 15% for searching by restaurant name
-  - 15% for searching by cuisine
-  - 15% for searching by zip code
-  - 50% for searching by combining multiple filters.
-  - 5% for limit
+![Working Solution Demo](app_demo.gif)
