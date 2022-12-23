@@ -68,11 +68,11 @@ If you are up for it, the ask is to create an API endpoint that meets the qualif
   - [inspection.py](inspection.py) --> The `Inspection` class, which represents a restaurant inspection and includes helper methods that should help form the API response.
   - [app.py](app.py) --> The file in which you will write out your API endpoint. Make sure only to submit this file in BlackBoard.
 
-**Please make sure only to submit the app.py file via Blackboard.**
-
 Things to keep in mind:
   - There is no need to sanitize nor validate the query parameter values in the URL. We are taking a leap of faith and trusting the values provided to us.
   - The default results limit is ten (10) unless specified by the client. Unless the client provides a limit via a query parameter (`?limit=25`), you are to return up to 10 results.
   - Clients can choose to provide one filter or many. Your solution should be able to accommodate any combination.
 
+
+Below is a small demo of a working solution.
 ![Working Solution Demo](app_demo.gif)
